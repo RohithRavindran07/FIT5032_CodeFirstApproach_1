@@ -1,0 +1,42 @@
+﻿@model FIT5032_CodeFirstApproach_1.Models.Photographer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Photographer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.organization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.organization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eventscovered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eventscovered)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PhotographerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

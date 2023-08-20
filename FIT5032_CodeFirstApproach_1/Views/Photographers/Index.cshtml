@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FIT5032_CodeFirstApproach_1.Models.Photographer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.organization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eventscovered)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.organization)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eventscovered)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PhotographerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PhotographerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PhotographerID })
+        </td>
+    </tr>
+}
+
+</table>
